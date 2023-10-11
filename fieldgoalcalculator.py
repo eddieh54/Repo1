@@ -5,9 +5,9 @@ from bs4 import BeautifulSoup
 
 
 url = 'https://www.pro-football-reference.com/years/2023/kicking.htm'
-url2 = 'https://www.teamrankings.com/nfl/stat/opponent-field-goal-attempts-per-game'
+#url2 = 'https://www.teamrankings.com/nfl/stat/opponent-field-goal-attempts-per-game'
 data = requests.get(url)
-data2 = requests.get(url2)
+#data2 = requests.get(url2)
 
 statlist = []
 Player = []
@@ -18,10 +18,10 @@ teamlist = []
 fieldgoalmade = []
 
 html = BeautifulSoup(data.text, 'html.parser')
-html2 = BeautifulSoup(data2.text, 'html.parser')
+#html2 = BeautifulSoup(data2.text, 'html.parser')
 
 results = html.find(id= 'div_kicking')
-results2 = html2.find(id = 'DataTables_Table_0')
+#results2 = html2.find(id = 'DataTables_Table_0')
 
 row = results.find_all('td')
 #row2 = results2.find_all('tr')
